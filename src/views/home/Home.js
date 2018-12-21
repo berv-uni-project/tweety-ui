@@ -35,8 +35,7 @@ export default {
           this.isLoading = true;
           axios
             .post(
-              services.search,
-              {
+              services.search, {
                 Name: this.form.search,
                 DinasKesehatan: this.form.dinkes.join(","),
                 DinasPemuda: this.form.dinpem.join(","),
@@ -44,8 +43,7 @@ export default {
                 DinasPendidikan: this.form.dinpen.join(","),
                 DinasBinamarga: this.form.dinbina.join(","),
                 IsKMP: this.form.method
-              },
-              {
+              }, {
                 responseType: "json"
               }
             )

@@ -1,23 +1,9 @@
 {
-  "root": true,
   "parserOptions": {
-    "parser": "babel-eslint",
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "babel"
-  ],
   "rules": {
     "semi": 2
-  },
-  "extends": [
-    "plugin:vue/recommended",
-    "plugin:prettier/recommended",
-    "eslint:recommended"
-  ],
-  "env": {
-    "node": true,
-    "browser": true
   }
 }
