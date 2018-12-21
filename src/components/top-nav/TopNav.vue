@@ -1,9 +1,18 @@
 <template>
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <nav
+    class="navbar is-fixed-top"
+    role="navigation"
+    aria-label="main navigation"
+  >
     <div class="navbar-brand">
-      <router-link class="navbar-item" to="/">
-        <h1 class="title">Tweety</h1>
-      </router-link>
+      <RouterLink
+        class="navbar-item"
+        to="/"
+      >
+        <h1 class="title">
+          Tweety
+        </h1>
+      </RouterLink>
 
       <a
         id="burger"
@@ -14,15 +23,28 @@
         data-target="navbarBasicExample"
         @click="burgerClick"
       >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
       </a>
     </div>
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div
+      id="navbarBasicExample"
+      class="navbar-menu"
+    >
       <div class="navbar-end">
-        <router-link class="navbar-item" to="/">Home</router-link>
-        <router-link class="navbar-item" to="/about">About</router-link>
+        <RouterLink
+          class="navbar-item"
+          to="/"
+        >
+          Home
+        </RouterLink>
+        <RouterLink
+          class="navbar-item"
+          to="/about"
+        >
+          About
+        </RouterLink>
       </div>
     </div>
   </nav>
