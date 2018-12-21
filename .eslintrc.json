@@ -1,9 +1,18 @@
 {
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "parser": "babel-eslint"
   },
   "rules": {
     "semi": 2
-  }
+  },
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/essential",
+    "@vue/prettier"
+  ]
 }

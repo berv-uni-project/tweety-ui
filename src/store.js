@@ -11,21 +11,13 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    setResult(state, {
-      count,
-      tweet
-    }) {
+    setResult(state, { count, tweet }) {
       state.result.count = count;
       state.result.tweet = tweet;
     }
   },
   actions: {
-    saveResult({
-      commit
-    }, {
-      count,
-      tweet
-    }) {
+    saveResult({ commit }, { count, tweet }) {
       commit("setResult", {
         count,
         tweet

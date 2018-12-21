@@ -1,7 +1,7 @@
 import axios from "axios";
 import HomeForm from "@/components/home-form/HomeForm.vue";
 import HomeResult from "@/components/home-result/HomeResult.vue";
-import services from "@/services/index.js";
+import services from "@/services/index";
 
 export default {
   name: "home",
@@ -35,7 +35,8 @@ export default {
           this.isLoading = true;
           axios
             .post(
-              services.search, {
+              services.search,
+              {
                 Name: this.form.search,
                 DinasKesehatan: this.form.dinkes.join(","),
                 DinasPemuda: this.form.dinpem.join(","),
@@ -43,7 +44,8 @@ export default {
                 DinasPendidikan: this.form.dinpen.join(","),
                 DinasBinamarga: this.form.dinbina.join(","),
                 IsKMP: this.form.method
-              }, {
+              },
+              {
                 responseType: "json"
               }
             )

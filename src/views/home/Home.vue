@@ -6,7 +6,7 @@
         <home-form :form="form" :submitData="submitData"></home-form>
       </b-tab-item>
       <b-tab-item label='Result'>
-        <home-result :result="result"></home-result>  
+        <home-result :result="result"></home-result>
       </b-tab-item>
     </b-tabs>
   </div>
