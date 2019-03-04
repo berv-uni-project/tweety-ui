@@ -4,5 +4,5 @@ if (!process.env.IS_DOCKER) {
 }
 
 module.exports = {
-  baseUrl: URL
+  publicPath: URL
 };

@@ -28,5 +28,4 @@
   </nav>
 </template>
 
-<script src="./TopNav.js">
-</script>
+<script src="./TopNav.js"></script>

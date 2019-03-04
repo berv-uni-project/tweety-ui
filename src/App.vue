@@ -3,14 +3,12 @@
     <top-nav></top-nav>
     <section class="section">
       <div class="container">
-        <router-view/>
+        <router-view />
       </div>
     </section>
   </div>
 </template>
 
-<script src="./App.js">
-</script>
+<script src="./App.js"></script>
 
-<style lang="scss" src="./app.scss">
-</style>
+<style lang="scss" src="./app.scss"></style>

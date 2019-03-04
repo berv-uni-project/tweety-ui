@@ -1,10 +1,10 @@
 <template>
-    <div class="box">
+  <div class="box">
     <h1 class="title has-text-centered">Tweety</h1>
     <form @submit.prevent="submitData">
       <b-field
         label="Search"
-        :type="{'is-danger': errors.has('search')}"
+        :type="{ 'is-danger': errors.has('search') }"
         :message="errors.first('search')"
       >
         <b-input
@@ -68,16 +68,19 @@
       <b-field
         label="Select Method"
         :addons="false"
-        :type="{'is-danger': errors.has('isKMP')}"
+        :type="{ 'is-danger': errors.has('isKMP') }"
         :message="errors.first('isKMP')"
       >
-        <b-radio v-model="form.method" name="isKMP" native-value="true" v-validate="'required'">KMP</b-radio>
-        <b-radio v-model="form.method" name="isKMP" native-value="false" v-validate="'required'">Booyer-Moore</b-radio>
+        <b-radio v-model="form.method" name="isKMP" native-value="true" v-validate="'required'"
+          >KMP</b-radio
+        >
+        <b-radio v-model="form.method" name="isKMP" native-value="false" v-validate="'required'"
+          >Booyer-Moore</b-radio
+        >
       </b-field>
       <button class="button is-primary" type="submit">Submit</button>
     </form>
   </div>
 </template>
 
-<script src="./HomeForm.js">
-</script>
+<script src="./HomeForm.js"></script>
