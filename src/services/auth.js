@@ -3,7 +3,7 @@ import decode from "jwt-decode";
 import EventEmitter from "events";
 import authConfig from "../../auth_config.json";
 
-let baseURL = process.env.VUE_APP_BASE_URL;
+let baseURL = process.env.VUE_APP_UI_URL;
 
 if (!baseURL) {
 baseURL = window.location.origin
