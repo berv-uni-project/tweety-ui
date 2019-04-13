@@ -3,9 +3,15 @@ import decode from "jwt-decode";
 import EventEmitter from "events";
 import authConfig from "../../auth_config.json";
 
+let baseURL = process.env.VUE_APP_BASE_URL;
+
+if (!baseURL) {
+baseURL = window.location.origin
+}
+
 const webAuth = new auth0.WebAuth({
   domain: authConfig.domain,
-  redirectUri: `${window.location.origin}/callback`,
+  redirectUri: `${baseURL}/callback`,
   clientID: authConfig.clientId,
   responseType: "id_token",
   scope: "openid profile email"
