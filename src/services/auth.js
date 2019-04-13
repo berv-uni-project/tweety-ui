@@ -6,7 +6,7 @@ import authConfig from "../../auth_config.json";
 let baseURL = process.env.VUE_APP_UI_URL;
 
 if (!baseURL) {
-baseURL = window.location.origin
+  baseURL = window.location.origin
 }
 
 const webAuth = new auth0.WebAuth({
