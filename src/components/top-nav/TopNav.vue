@@ -22,7 +22,19 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-end">
         <router-link class="navbar-item" to="/">Home</router-link>
+        <router-link v-if="isAuthenticated" class="navbar-item" to="/search">Search</router-link>
         <router-link class="navbar-item" to="/about">About</router-link>
+        <li v-if="isAuthenticated" class="navbar-item">Welcome {{ profile.name }}</li>
+        <div class="navbar-item">
+          <div class="buttons">
+            <a v-if="!isAuthenticated" class="button is-primary" @click.prevent="login">
+              <strong>Log in</strong>
+            </a>
+            <a v-if="isAuthenticated" class="button is-danger" @click.prevent="logout">
+              Log out
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>

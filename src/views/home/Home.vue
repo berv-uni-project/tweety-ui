@@ -1,15 +1,19 @@
 <template>
-  <div>
-    <b-loading :is-full-page="true" :active.sync="isLoading" :can-cancel="false"></b-loading>
-    <b-tabs v-model="activeTab" position="is-centered">
-      <b-tab-item label="Search">
-        <home-form :form="form" :submitData="submitData"></home-form>
-      </b-tab-item>
-      <b-tab-item label="Result">
-        <home-result :result="result"></home-result>
-      </b-tab-item>
-    </b-tabs>
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <div class="card has-text-centered">
+        <div class="card-image is-centered">
+          <figure class="image is-square">
+            <img src="Tweety.jpg" alt="logo" />
+          </figure>
+        </div>
+        <div class="card-content">
+          <h1 class="title">Welcome to Tweety</h1>
+          <h2 class="subtitle">To Use this App. Please login.</h2>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script src="./Home.js"></script>
+<script src="./Home.js" />
