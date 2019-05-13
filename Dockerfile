@@ -1,9 +1,9 @@
 FROM node:alpine as build
 WORKDIR /app
 COPY package.json package.json
-RUN npm install
+RUN yarn
 COPY . .
-RUN IS_DOCKER=true npm run build
+RUN IS_DOCKER=true yarn build
 
 FROM nginx:stable-alpine as run
 RUN mkdir /app

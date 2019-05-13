@@ -13,7 +13,8 @@ const webAuth = new auth0.WebAuth({
   domain: authConfig.domain,
   redirectUri: `${baseURL}/callback`,
   clientID: authConfig.clientId,
-  responseType: "id_token",
+  audience: authConfig.audience,   // add the audience
+  responseType: "token id_token",
   scope: "openid profile email"
 });
 
@@ -24,6 +25,11 @@ class AuthService extends EventEmitter {
   idToken = null;
   profile = null;
   tokenExpiry = null;
+
+  // Add fields here to store the Access Token and the expiry time
+  accessToken = null;
+  accessTokenExpiry = null;
+
   // Starts the user login flow
   login(customState) {
     webAuth.authorize({
@@ -50,6 +56,13 @@ class AuthService extends EventEmitter {
 
     // Convert the JWT expiry time from seconds to milliseconds
     this.tokenExpiry = new Date(this.profile.exp * 1000);
+
+    // NEW - Save the Access Token and expiry time in memory
+    this.accessToken = authResult.accessToken;
+
+    // Convert expiresIn to milliseconds and add the current time
+    // (expiresIn is a relative timestamp, but an absolute time is desired)
+    this.accessTokenExpiry = new Date(Date.now() + authResult.expiresIn * 1000);
 
     window.localStorage.setItem(ID_TOKEN_KEY, authResult.idToken);
     this.emit(loginEvent, {
@@ -80,6 +93,8 @@ class AuthService extends EventEmitter {
     this.idToken = null;
     this.tokenExpiry = null;
     this.profile = null;
+    this.accessToken = null;
+    this.accessTokenExpiry = null;
     webAuth.logout({
       returnTo: window.location.origin
     });
@@ -124,6 +139,26 @@ class AuthService extends EventEmitter {
   isTokenExpired(token) {
     const expirationDate = this.getTokenExpirationDate(token);
     return expirationDate < new Date();
+  }
+
+  isAccessTokenValid() {
+    return (
+      this.accessToken &&
+      this.accessTokenExpiry &&
+      Date.now() < this.accessTokenExpiry
+    );
+  }
+
+  getAccessToken() {
+    return new Promise((resolve, reject) => {
+      if (this.isAccessTokenValid()) {
+        resolve(this.accessToken);
+      } else {
+        this.renewTokens().then(authResult => {
+          resolve(authResult.accessToken);
+        }, reject);
+      }
+    });
   }
 }
 
