@@ -1,9 +1,14 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import LogRocket from "logrocket";
+import createPlugin from "logrocket-vuex";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+LogRocket.init("uah8l9/tweety");
+const logrocketPlugin = createPlugin(LogRocket);
+const store = new Vuex.Store({
+  plugins: [logrocketPlugin],
   state: {
     result: {
       count: 0,
@@ -25,3 +30,5 @@ export default new Vuex.Store({
     }
   }
 });
+
+export default store;

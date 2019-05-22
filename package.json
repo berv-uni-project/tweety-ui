@@ -14,6 +14,8 @@
     "axios": "^0.18.0",
     "buefy": "^0.7.5",
     "jwt-decode": "^2.2.0",
+    "logrocket": "^0.6.21",
+    "logrocket-vuex": "^0.0.3",
     "vee-validate": "^2.2.7",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
