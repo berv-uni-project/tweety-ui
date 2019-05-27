@@ -10,7 +10,7 @@
     "fix-lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "auth0-js": "^9.10.3",
+    "auth0-js": "^9.10.4",
     "axios": "^0.18.0",
     "buefy": "^0.7.6",
     "jwt-decode": "^2.2.0",
