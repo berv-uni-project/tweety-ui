@@ -1,0 +1,30 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "IS_DOCKER": {
+      "required": true
+    },
+    "VUE_APP_BASE_URL": {
+      "required": true
+    },
+    "VUE_APP_UI_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "tweety-ui",
+  "scripts": {
+  },
+  "stack": "container"
+}
