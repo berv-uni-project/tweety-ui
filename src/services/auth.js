@@ -6,14 +6,14 @@ import authConfig from "../../auth_config.json";
 let baseURL = process.env.VUE_APP_UI_URL;
 
 if (!baseURL) {
-  baseURL = window.location.origin
+  baseURL = window.location.origin;
 }
 
 const webAuth = new auth0.WebAuth({
   domain: authConfig.domain,
   redirectUri: `${baseURL}/callback`,
   clientID: authConfig.clientId,
-  audience: authConfig.audience,   // add the audience
+  audience: authConfig.audience, // add the audience
   responseType: "token id_token",
   scope: "openid profile email"
 });
@@ -142,11 +142,7 @@ class AuthService extends EventEmitter {
   }
 
   isAccessTokenValid() {
-    return (
-      this.accessToken &&
-      this.accessTokenExpiry &&
-      Date.now() < this.accessTokenExpiry
-    );
+    return this.accessToken && this.accessTokenExpiry && Date.now() < this.accessTokenExpiry;
   }
 
   getAccessToken() {

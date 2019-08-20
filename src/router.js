@@ -8,7 +8,7 @@ import auth from "./services/auth";
 Vue.use(Router);
 
 var router = new Router({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
       path: "/callback",
