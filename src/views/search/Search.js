@@ -78,27 +78,17 @@ export default {
         });
     },
     submitData() {
-      this.$validator.validateAll().then(result => {
-        if (result) {
-          this.isLoading = true;
-          this.$auth
-            .getAccessToken()
-            .then(this.getData)
-            .catch(err => {
-              this.$notification.open({
-                message: err.message,
-                type: "is-danger",
-                position: "is-bottom"
-              });
-            });
-        } else {
+      this.isLoading = true;
+      this.$auth
+        .getAccessToken()
+        .then(this.getData)
+        .catch(err => {
           this.$notification.open({
-            message: "Form is not valid! Please check the fields.",
+            message: err.message,
             type: "is-danger",
             position: "is-bottom"
           });
-        }
-      });
+        });
     }
   }
 };

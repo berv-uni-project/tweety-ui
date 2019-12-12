@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Buefy from "buefy";
-import VeeValidate from "vee-validate";
+import { extend, ValidationObserver, ValidationProvider } from "vee-validate";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -10,8 +10,19 @@ Vue.config.productionTip = false;
 Vue.use(Buefy, {
   defaultIconPack: "fa"
 });
-Vue.use(VeeValidate);
 Vue.use(AuthPlugin);
+Vue.component("ValidationObserver", ValidationObserver);
+Vue.component("ValidationProvider", ValidationProvider);
+extend("required", {
+  validate(value) {
+    return {
+      required: true,
+      valid: ["", null, undefined].indexOf(value) === -1
+    };
+  },
+  computesRequired: true
+});
+
 
 new Vue({
   router,
