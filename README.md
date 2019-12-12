@@ -1,6 +1,6 @@
 # tweety-ui
 
-[![Build Status](https://travis-ci.org/berv-uni-project/tweety-ui.svg?branch=master)](https://travis-ci.org/berv-uni-project/tweety-ui)
+[![Build Status](https://travis-ci.com/berv-uni-project/tweety-ui.svg?branch=master)](https://travis-ci.com/berv-uni-project/tweety-ui)
 
 ## Related Project
 
