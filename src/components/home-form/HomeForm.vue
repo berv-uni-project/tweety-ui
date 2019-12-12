@@ -3,8 +3,8 @@
     <h1 class="title has-text-centered">Tweety</h1>
     <ValidationObserver v-slot="{ handleSubmit }">
       <form @submit.prevent="handleSubmit(submitData)">
-        <ValidationProvider name="search" rules="required" v-slot="{ errors, failed }">
-          <b-field label="Search" :type="{ 'is-danger': failed }" :message="errors[0]">
+        <ValidationProvider name="search" rules="required" v-slot="{ errors, failed, passed }">
+          <b-field label="Search" :type="{ 'is-danger': failed, 'is-success': passed }" :message="errors[0]">
             <b-input v-model="form.search" placeholder="Search Keyword in Twitter" />
           </b-field>
         </ValidationProvider>
@@ -58,11 +58,11 @@
             placeholder="Search Tags for Dinas Binamarga dan Pengairan"
           ></b-taginput>
         </b-field>
-        <ValidationProvider name="isKMP" rules="required" v-slot="{ errors, failed }">
+        <ValidationProvider name="isKMP" rules="required" v-slot="{ errors, failed, passed }">
           <b-field
             label="Select Method"
             :addons="false"
-            :type="{ 'is-danger': failed }"
+            :type="{ 'is-danger': failed, 'is-success': passed }"
             :message="errors[0]"
           >
             <b-radio v-model="form.method" native-value="true">KMP</b-radio>
