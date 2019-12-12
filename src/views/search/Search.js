@@ -52,7 +52,7 @@ export default {
         .then(response => {
           this.isLoading = false;
           if (response.status === 200) {
-            this.$notification.open({
+            this.$buefy.notification.open({
               message: "Success",
               type: "is-success",
               position: "is-bottom"
@@ -61,7 +61,7 @@ export default {
             this.result.query = response.data.result.data.query;
             this.activeTab = 1;
           } else {
-            this.$notification.open({
+            this.$buefy.notification.open({
               message: "Form is not valid! Please check the fields.",
               type: "is-danger",
               position: "is-bottom"
@@ -70,7 +70,7 @@ export default {
         })
         .catch(error => {
           this.isLoading = false;
-          this.$notification.open({
+          this.$buefy.notification.open({
             message: error.message,
             type: "is-danger",
             position: "is-bottom"
@@ -83,7 +83,7 @@ export default {
         .getAccessToken()
         .then(this.getData)
         .catch(err => {
-          this.$notification.open({
+          this.$buefy.notification.open({
             message: err.message,
             type: "is-danger",
             position: "is-bottom"
