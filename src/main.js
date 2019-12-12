@@ -23,7 +23,6 @@ extend("required", {
   computesRequired: true
 });
 
-
 new Vue({
   router,
   store,
