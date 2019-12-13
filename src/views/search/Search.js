@@ -14,7 +14,7 @@ export default {
         dinsos: [],
         dinpen: [],
         dinbina: [],
-        method: ""
+        method: null
       },
       result: {
         count: 0,
@@ -40,7 +40,7 @@ export default {
             DinasSosial: this.form.dinsos.join(","),
             DinasPendidikan: this.form.dinpen.join(","),
             DinasBinamarga: this.form.dinbina.join(","),
-            IsKMP: this.form.method
+            IsKMP: this.form.method === "true"
           },
           {
             headers: {
