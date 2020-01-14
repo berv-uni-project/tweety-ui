@@ -4,7 +4,11 @@
     <ValidationObserver v-slot="{ handleSubmit }">
       <form @submit.prevent="handleSubmit(submitData)">
         <ValidationProvider name="search" rules="required" v-slot="{ errors, failed, passed }">
-          <b-field label="Search" :type="{ 'is-danger': failed, 'is-success': passed }" :message="errors[0]">
+          <b-field
+            label="Search"
+            :type="{ 'is-danger': failed, 'is-success': passed }"
+            :message="errors[0]"
+          >
             <b-input v-model="form.search" placeholder="Search Keyword in Twitter" />
           </b-field>
         </ValidationProvider>
