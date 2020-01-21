@@ -12,7 +12,7 @@
   "dependencies": {
     "auth0-js": "^9.12.2",
     "axios": "^0.19.1",
-    "buefy": "^0.8.9",
+    "buefy": "^0.8.10",
     "jwt-decode": "^2.2.0",
     "logrocket": "^1.0.6",
     "logrocket-vuex": "^0.0.3",
