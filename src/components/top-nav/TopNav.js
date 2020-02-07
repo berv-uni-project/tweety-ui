@@ -9,13 +9,5 @@ export default {
         returnTo: window.location.origin
       });
     }
-  },
-  async created() {
-    try {
-      await this.$auth.renewTokens();
-    } catch (e) {
-      //console.log(e);
-      this.$buefy.notification.open(e.message);
-    }
   }
 };
