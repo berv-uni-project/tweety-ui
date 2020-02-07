@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Search from "./views/search/Search.vue";
-import Callback from "./views/callback/Callback.vue";
 import Home from "./views/home/Home.vue";
 import { authGuard } from "./auth/authGuard";
 
@@ -10,11 +9,6 @@ Vue.use(Router);
 var router = new Router({
   mode: "history",
   routes: [
-    {
-      path: "/callback",
-      name: "callback",
-      component: Callback
-    },
     {
       path: "/search",
       name: "search",
