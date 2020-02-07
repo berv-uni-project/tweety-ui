@@ -4,13 +4,21 @@ import { extend, ValidationObserver, ValidationProvider } from "vee-validate";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import AuthPlugin from "./plugins/auth";
+import { domain, clientId } from "../auth_config.json";
+import { Auth0Plugin } from "./auth";
 
 Vue.config.productionTip = false;
 Vue.use(Buefy, {
   defaultIconPack: "fa"
 });
-Vue.use(AuthPlugin);
+// Install the authentication plugin here
+Vue.use(Auth0Plugin, {
+  domain,
+  clientId,
+  onRedirectCallback: appState => {
+    router.push(appState && appState.targetUrl ? appState.targetUrl : window.location.pathname);
+  }
+});
 Vue.component("ValidationObserver", ValidationObserver);
 Vue.component("ValidationProvider", ValidationProvider);
 extend("required", {

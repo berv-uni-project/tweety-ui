@@ -3,7 +3,7 @@ import Router from "vue-router";
 import Search from "./views/search/Search.vue";
 import Callback from "./views/callback/Callback.vue";
 import Home from "./views/home/Home.vue";
-import auth from "./services/auth";
+import { authGuard } from "./auth/authGuard";
 
 Vue.use(Router);
 
@@ -18,7 +18,8 @@ var router = new Router({
     {
       path: "/search",
       name: "search",
-      component: Search
+      component: Search,
+      beforeEnter: authGuard
     },
     {
       path: "/about",
@@ -38,21 +39,6 @@ var router = new Router({
       redirect: "home"
     }
   ]
-});
-
-router.beforeEach((to, from, next) => {
-  if (
-    to.path === "/" ||
-    to.path === "/callback" ||
-    to.path === "/about" ||
-    auth.isAuthenticated()
-  ) {
-    return next();
-  }
-
-  // Specify the current path as the customState parameter, meaning it
-  // will be returned to the application after auth
-  auth.login({ target: to.path });
 });
 
 export default router;
