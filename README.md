@@ -8,9 +8,9 @@
 
 ## Demo
 
-* [Demo](https://berv-uni-project.github.io/tweety/)
+* [Demo](https://tweety.onrender.com/)
 
-* [Demo MVC](https://tweetycore.azurewebsites.net/)
+* [Demo MVC](https://tweety-core.azurewebsites.net)
 
 ## Dependencies
 
@@ -18,6 +18,7 @@
 * Buefy
 * VeeValidate
 * Axios
+* auth0
 
 ## Project setup
 

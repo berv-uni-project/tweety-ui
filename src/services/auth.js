@@ -4,16 +4,21 @@ import EventEmitter from "events";
 import authConfig from "../../auth_config.json";
 
 let baseURL = process.env.VUE_APP_UI_URL;
+let audiance = process.env.VUE_APP_AUDIANCE;
 
 if (!baseURL) {
   baseURL = window.location.origin;
+}
+
+if (!audiance) {
+  audiance = window.location.origin;
 }
 
 const webAuth = new auth0.WebAuth({
   domain: authConfig.domain,
   redirectUri: `${baseURL}/callback`,
   clientID: authConfig.clientId,
-  audience: authConfig.audience, // add the audience
+  audience: audiance, // add the audience
   responseType: "token id_token",
   scope: "openid profile email"
 });
