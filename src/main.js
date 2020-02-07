@@ -11,10 +11,17 @@ Vue.config.productionTip = false;
 Vue.use(Buefy, {
   defaultIconPack: "fa"
 });
+
+let audiance = process.env.VUE_APP_AUDIANCE;
+
+if (!audiance) {
+  audiance = window.location.origin;
+}
 // Install the authentication plugin here
 Vue.use(Auth0Plugin, {
   domain,
   clientId,
+  audiance,
   onRedirectCallback: appState => {
     router.push(appState && appState.targetUrl ? appState.targetUrl : window.location.pathname);
   }
