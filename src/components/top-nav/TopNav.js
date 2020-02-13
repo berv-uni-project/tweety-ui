@@ -2,9 +2,7 @@ export default {
   name: "top-nav",
   methods: {
     login() {
-      this.$auth.loginWithRedirect({
-        audiance: process.env.VUE_APP_AUDIANCE || window.location.origin
-      });
+      this.$auth.loginWithRedirect();
     },
     logout() {
       this.$auth.logout({
