@@ -16,7 +16,7 @@
     "jwt-decode": "^2.2.0",
     "logrocket": "^1.0.6",
     "logrocket-vuex": "^0.0.3",
-    "vee-validate": "^3.2.4",
+    "vee-validate": "^3.2.5",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"
