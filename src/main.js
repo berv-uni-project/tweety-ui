@@ -17,9 +17,7 @@ let audiance = process.env.VUE_APP_AUDIANCE;
 if (!audiance) {
   audiance = window.location.origin;
 }
-alert(audiance);
-alert(clientId);
-alert(domain);
+
 // Install the authentication plugin here
 Vue.use(Auth0Plugin, {
   domain,
