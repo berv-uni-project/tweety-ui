@@ -80,10 +80,8 @@ export default {
     submitData() {
       this.isLoading = true;
       this.$auth
-        .getIdTokenClaims()
-        .then(result => {
-          this.getData(result.__raw);
-        })
+        .getTokenSilently()
+        .then(this.getData)
         .catch(err => {
           this.$buefy.notification.open({
             message: err.message,
