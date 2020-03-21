@@ -80,7 +80,7 @@ export default {
     submitData() {
       this.isLoading = true;
       const scopeSend = {
-        scope: "read:users"
+        scope: "openid read:users"
       };
       this.$auth
         .getTokenSilently(scopeSend)
