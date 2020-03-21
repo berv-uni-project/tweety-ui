@@ -79,8 +79,11 @@ export default {
     },
     submitData() {
       this.isLoading = true;
+      const scopeSend = {
+        scope: "read:users"
+      };
       this.$auth
-        .getTokenSilently()
+        .getTokenSilently(scopeSend)
         .then(this.getData)
         .catch(err => {
           this.$buefy.notification.open({
