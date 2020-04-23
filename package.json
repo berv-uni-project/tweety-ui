@@ -12,7 +12,7 @@
   "dependencies": {
     "auth0-spa-js": "^1.6.5",
     "axios": "^0.19.2",
-    "buefy": "^0.8.15",
+    "buefy": "^0.8.16",
     "logrocket": "^1.0.7",
     "logrocket-vuex": "^0.0.3",
     "vee-validate": "^3.3.0",
