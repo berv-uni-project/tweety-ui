@@ -3,34 +3,31 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "fix-lint": "vue-cli-service lint --fix"
+    "fix-lint": "vue-cli-service lint --fix",
+    "start": "npm run serve"
   },
   "dependencies": {
-    "auth0-spa-js": "^1.6.5",
+    "@auth0/auth0-spa-js": "^1.10.0",
     "axios": "^0.19.2",
     "buefy": "^0.8.20",
-    "logrocket": "^1.0.9",
-    "logrocket-vuex": "^0.0.3",
     "vee-validate": "^3.3.7",
     "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.4.2",
     "vue-router": "^3.3.4",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.6",
-    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-plugin-typescript": "^4.4.6",
     "@vue/cli-service": "^4.4.6",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
   }
 }

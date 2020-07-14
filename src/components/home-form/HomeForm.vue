@@ -79,4 +79,4 @@
   </div>
 </template>
 
-<script src="./HomeForm.js"></script>
+<script lang="ts" src="./HomeForm.ts"></script>

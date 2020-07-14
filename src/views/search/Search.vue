@@ -12,4 +12,4 @@
   </div>
 </template>
 
-<script src="./Search.js"></script>
+<script lang="ts" src="./Search.ts"></script>

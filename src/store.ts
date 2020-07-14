@@ -1,14 +1,9 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import LogRocket from "logrocket";
-import createPlugin from "logrocket-vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-LogRocket.init("uah8l9/tweety");
-const logrocketPlugin = createPlugin(LogRocket);
 const store = new Vuex.Store({
-  plugins: [logrocketPlugin],
   state: {
     result: {
       count: 0,
@@ -23,7 +18,7 @@ const store = new Vuex.Store({
   },
   actions: {
     saveResult({ commit }, { count, tweet }) {
-      commit("setResult", {
+      commit('setResult', {
         count,
         tweet
       });

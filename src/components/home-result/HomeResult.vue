@@ -10,10 +10,7 @@
           <article class="media">
             <div class="media-left">
               <figure class="image is-64x64">
-                <img
-                  :src="tweet.tweetContent.createdBy.profileImageUrl"
-                  alt="Profile Placeholder"
-                />
+                <img :src="tweet.tweetContent.createdBy.profileImageUrl" alt="Profile Placeholder" />
               </figure>
             </div>
             <div class="media-content">
@@ -22,9 +19,11 @@
                 <h5 class="subtitle">@{{ tweet.tweetContent.createdBy.screenName }}</h5>
                 <p v-html="tweet.result"></p>
                 <p>
-                  <a :href="tweet.tweetContent.url">{{
+                  <a :href="tweet.tweetContent.url">
+                    {{
                     tweet.tweetContent.tweetLocalCreationDate
-                  }}</a>
+                    }}
+                  </a>
                 </p>
               </div>
             </div>
@@ -35,4 +34,4 @@
   </div>
 </template>
 
-<script src="./HomeResult.js"></script>
+<script lang="ts" src="./HomeResult.ts"></script>

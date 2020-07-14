@@ -16,4 +16,4 @@
   </div>
 </template>
 
-<script src="./Home.js" />
+<script lang="ts" src="./Home.ts" />

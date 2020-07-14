@@ -7,13 +7,9 @@
     </template>
     <template slot="end">
       <b-navbar-item tag="router-link" to="/">Home</b-navbar-item>
-      <b-navbar-item v-if="$auth.isAuthenticated" tag="router-link" to="/search"
-        >Search</b-navbar-item
-      >
+      <b-navbar-item v-if="$auth.isAuthenticated" tag="router-link" to="/search">Search</b-navbar-item>
       <b-navbar-item tag="router-link" to="/about">About</b-navbar-item>
-      <b-navbar-item v-if="$auth.isAuthenticated" tag="div"
-        >Welcome {{ $auth.user.email }}</b-navbar-item
-      >
+      <b-navbar-item v-if="$auth.isAuthenticated" tag="div">Welcome {{ $auth.user.email }}</b-navbar-item>
       <b-navbar-item tag="div" v-if="!$auth.loading">
         <div class="buttons">
           <a v-if="!$auth.isAuthenticated" class="button is-primary" @click.prevent="login">
@@ -26,4 +22,4 @@
   </b-navbar>
 </template>
 
-<script src="./TopNav.js"></script>
+<script lang="ts" src="./TopNav.ts"></script>
