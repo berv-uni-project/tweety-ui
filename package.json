@@ -10,7 +10,7 @@
     "start": "npm run serve"
   },
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.13.4",
+    "@auth0/auth0-spa-js": "^1.13.5",
     "axios": "^0.21.0",
     "buefy": "^0.9.4",
     "vee-validate": "^3.4.5",
