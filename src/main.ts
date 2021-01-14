@@ -1,32 +1,16 @@
 import Vue from 'vue';
 import Buefy from 'buefy';
 import { extend, ValidationObserver, ValidationProvider } from 'vee-validate';
+import { PublicClientApplication } from '@azure/msal-browser';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import { domain, clientId } from '../auth_config.json';
-import { Auth0Plugin } from './auth';
 
 Vue.config.productionTip = false;
 Vue.use(Buefy, {
   defaultIconPack: 'fa'
 });
 
-let audiance = process.env.VUE_APP_AUDIANCE;
-
-if (!audiance) {
-  audiance = window.location.origin;
-}
-
-// Install the authentication plugin here
-Vue.use(Auth0Plugin, {
-  domain,
-  clientId,
-  audiance,
-  onRedirectCallback: (appState: any) => {
-    router.push(appState && appState.targetUrl ? appState.targetUrl : window.location.pathname);
-  }
-});
 Vue.component('ValidationObserver', ValidationObserver);
 Vue.component('ValidationProvider', ValidationProvider);
 extend('required', {
@@ -38,6 +22,10 @@ extend('required', {
   },
   computesRequired: true
 });
+
+Vue.prototype.$msalInstance = new PublicClientApplication(
+  store.state.msalConfig
+);
 
 new Vue({
   router,

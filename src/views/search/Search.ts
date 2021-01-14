@@ -1,18 +1,26 @@
 import axios from 'axios';
 import Vue from 'vue';
+import { mapState } from 'vuex';
 import Components from 'vue-class-component';
 import HomeForm from '@/components/home-form/HomeForm.vue';
 import HomeResult from '@/components/home-result/HomeResult.vue';
 import services from '@/services/index';
+import { AuthenticationResult, AccountInfo, SilentRequest } from '@azure/msal-browser';
 
 @Components({
   name: 'home',
   components: {
     'home-form': HomeForm,
     'home-result': HomeResult
+  },
+  computed: {
+    ...mapState({
+      account: 'user'
+    })
   }
 })
 export default class Search extends Vue {
+  public account!: AccountInfo | null;
   protected form: any = {
     search: '',
     dinkes: [],
@@ -28,7 +36,7 @@ export default class Search extends Vue {
   }
   protected isLoading: boolean = false
   protected activeTab: number = 0
-  protected getData(accessToken: string) {
+  protected getData(authResult: AuthenticationResult) {
     axios
       .post(
         services.search,
@@ -43,7 +51,7 @@ export default class Search extends Vue {
         },
         {
           headers: {
-            Authorization: `Bearer ${accessToken}`
+            Authorization: `Bearer ${authResult.accessToken}`
           },
           responseType: 'json'
         }
@@ -78,12 +86,16 @@ export default class Search extends Vue {
   }
 
   protected submitData() {
+    if (!this.$msalInstance) {
+      return;
+    }
     this.isLoading = true;
-    const scopeSend = {
-      scope: 'openid read:users'
+    const request: SilentRequest = {
+      scopes: ['openid', 'User.Read'],
+      account: this.account || undefined
     };
-    this.$auth
-      .getTokenSilently(scopeSend)
+    this.$msalInstance
+      .acquireTokenSilent(request)
       .then(this.getData)
       .catch((err: any) => {
         this.$buefy.notification.open({
@@ -91,6 +103,7 @@ export default class Search extends Vue {
           type: 'is-danger',
           position: 'is-bottom'
         });
+        this.isLoading = false;
       });
   }
 }

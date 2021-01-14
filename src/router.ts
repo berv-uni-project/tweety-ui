@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Search from './views/search/Search.vue';
 import Home from './views/home/Home.vue';
-import { authGuard } from './auth/authGuard';
+import store from './store';
 
 Vue.use(Router);
 
@@ -13,7 +13,9 @@ const router = new Router({
       path: '/search',
       name: 'search',
       component: Search,
-      beforeEnter: authGuard
+      meta: {
+        requiresLogin: true
+      }
     },
     {
       path: '/about',
@@ -34,5 +36,23 @@ const router = new Router({
     }
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresLogin)) {
+    if (!router.app.$msalInstance) {
+      next('/');
+      return;
+    }
+    const acounts = router.app.$msalInstance.getAllAccounts();
+    if (acounts.length === 0) {
+      next('/');
+      return;
+    }
+    next();
+  }
+  else {
+    next();
+  }
+})
 
 export default router;
