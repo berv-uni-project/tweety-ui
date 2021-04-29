@@ -1,0 +1,13 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+    timezone: Asia/Jakarta
+  open-pull-requests-limit: 75
+  ignore:
+  - dependency-name: sass-loader
+    versions:
+    - 11.0.0
