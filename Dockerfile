@@ -1,6 +1,6 @@
-FROM node:alpine as build
+FROM node:lts-alpine as build
 WORKDIR /app
-RUN apk update && apk add yarn python g++ make && rm -rf /var/cache/apk/*
+RUN apk update && apk add yarn python3 g++ make && rm -rf /var/cache/apk/*
 COPY package.json package.json
 RUN yarn
 COPY . .
