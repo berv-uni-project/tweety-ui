@@ -10,7 +10,7 @@ jobs:
       - node/install:
           install-yarn: true
           install-npm: false
-          lts: true
+          npm-version: lts
       - node/install-packages:
           pkg-manager: yarn
       - run:
