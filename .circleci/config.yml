@@ -9,6 +9,7 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
+          install-npm: false
           lts: true
       - node/install-packages:
           pkg-manager: yarn
