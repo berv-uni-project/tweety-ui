@@ -1521,10 +1521,10 @@
     "@vue/babel-plugin-transform-vue-jsx" "^1.2.1"
     camelcase "^5.0.0"
 
-"@vue/cli-overlay@^5.0.0-beta.0":
-  version "5.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@vue/cli-overlay/-/cli-overlay-5.0.0-beta.0.tgz#56e979c2fe7637b3dcf553158380b21df3aeb805"
-  integrity sha512-iNygCQSO4dE8Hah+FjQJUHONHa1FVFVl1dVBVUB11AfWqB3EKIPNsCADO1b82qTie+IVoI2znkjKwsfXWtM2sw==
+"@vue/cli-overlay@^5.0.0-beta.1":
+  version "5.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-5.0.0-beta.1.tgz#1b27fec570246e9a7123bb372720e2e6a458f1c8"
+  integrity sha512-8hLXlpL9f5MjrLwbYpwQw1RsqzDD+KaQ3WqH6wRlUO2kXK2jSboW7hVqXrKnhX9vhc+9KCa/+W/LHKlyBnKYOw==
 
 "@vue/cli-plugin-babel@^5.0.0-beta.0":
   version "5.0.0-beta.0"
@@ -1538,12 +1538,12 @@
     thread-loader "^3.0.0"
     webpack "^5.22.0"
 
-"@vue/cli-plugin-router@^5.0.0-beta.0":
-  version "5.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@vue/cli-plugin-router/-/cli-plugin-router-5.0.0-beta.0.tgz#46a929034fa0f97dd6c268c8e3a22f055c8fe547"
-  integrity sha512-kz1GMA2ewlS5wM056Dw5ZcRQO07IDgBxy4Nw9wivuxF+AbpJkOAgVmj/j6H/h0JVTfSYZ+HjKOHvNIDbGBr9LQ==
+"@vue/cli-plugin-router@^5.0.0-beta.1":
+  version "5.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-router/-/cli-plugin-router-5.0.0-beta.1.tgz#300565ce4169298509a9bdfbf399330202419528"
+  integrity sha512-Dty7hYXypGpFHKV1Lr8mZPZjLPZ44czEaSuQYovtCpGEpoarO+E7Q0+xjXd6y/dnxZu1QqyNoqeYtbkCD2zF2Q==
   dependencies:
-    "@vue/cli-shared-utils" "^5.0.0-beta.0"
+    "@vue/cli-shared-utils" "^5.0.0-beta.1"
 
 "@vue/cli-plugin-typescript@^5.0.0-beta.1":
   version "5.0.0-beta.1"
@@ -1562,25 +1562,25 @@
     webpack "^5.22.0"
     yorkie "^2.0.0"
 
-"@vue/cli-plugin-vuex@^5.0.0-beta.0":
-  version "5.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@vue/cli-plugin-vuex/-/cli-plugin-vuex-5.0.0-beta.0.tgz#beb45e126c88bbb83631ff93109502439f53ff94"
-  integrity sha512-sZMrVsvn+dDUQwSuWUebpwlH0QwC8hUqr8w342jrIb9A596cVo88g/vzakqR+a4Aoo+eeHNZ5ZOOzi1wieuClA==
+"@vue/cli-plugin-vuex@^5.0.0-beta.1":
+  version "5.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-vuex/-/cli-plugin-vuex-5.0.0-beta.1.tgz#807d4e625a95fec6926b071698b980d0e36b1448"
+  integrity sha512-0lbC/+5vn6XzzHFbV6H0Hy0m34IT3CgeO2vQjwF7QVr9mtxWO8u3R1JZ810E58r0pRQycpMg2xtnwZ/Ia14XVQ==
 
-"@vue/cli-service@^5.0.0-beta.0":
-  version "5.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@vue/cli-service/-/cli-service-5.0.0-beta.0.tgz#b31700c130b27168541cb0fe57a754230689ccf8"
-  integrity sha512-Mgu5lOq82HReF6izrcNoTbfTf2FjldSW6t7gkreoaDbo7tdliRrMo7Bz1sUnLWAj/uQSv3NzMwXt6BjVZszjHg==
+"@vue/cli-service@^5.0.0-beta.1":
+  version "5.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-5.0.0-beta.1.tgz#7ef6b417e99025eb8e5725c9880ce68d87c6c21a"
+  integrity sha512-SkSWlsf7E3nQALDeS4QuX37RdOeGbO+mm2yBJ+R07X2lzR2EYTRO249EcctEFTOt3aalEOEWfnrc8EjPXp7tgg==
   dependencies:
     "@babel/helper-compilation-targets" "^7.12.16"
     "@soda/friendly-errors-webpack-plugin" "^1.8.0"
     "@soda/get-current-script" "^1.0.2"
     "@types/minimist" "^1.2.0"
     "@types/webpack-dev-server" "^3.11.0"
-    "@vue/cli-overlay" "^5.0.0-beta.0"
-    "@vue/cli-plugin-router" "^5.0.0-beta.0"
-    "@vue/cli-plugin-vuex" "^5.0.0-beta.0"
-    "@vue/cli-shared-utils" "^5.0.0-beta.0"
+    "@vue/cli-overlay" "^5.0.0-beta.1"
+    "@vue/cli-plugin-router" "^5.0.0-beta.1"
+    "@vue/cli-plugin-vuex" "^5.0.0-beta.1"
+    "@vue/cli-shared-utils" "^5.0.0-beta.1"
     "@vue/component-compiler-utils" "^3.1.2"
     "@vue/web-component-wrapper" "^1.3.0"
     acorn "^8.0.5"
@@ -2283,17 +2283,7 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-browserslist@^4.0.0:
-  version "4.13.0"
-  resolved "https://registry.npmjs.org/browserslist/-/browserslist-4.13.0.tgz#42556cba011e1b0a2775b611cba6a8eca18e940d"
-  integrity sha512-MINatJ5ZNrLnQ6blGvePd/QOz9Xtu+Ne+x29iQSCHfkU5BugKVJwZKn/iiL8UbpIpa3JhviKjz+XxMo0m2caFQ==
-  dependencies:
-    caniuse-lite "^1.0.30001093"
-    electron-to-chromium "^1.3.488"
-    escalade "^3.0.1"
-    node-releases "^1.1.58"
-
-browserslist@^4.14.5, browserslist@^4.16.0, browserslist@^4.16.3, browserslist@^4.16.6:
+browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.0, browserslist@^4.16.3, browserslist@^4.16.6:
   version "4.16.6"
   resolved "https://registry.npmjs.org/browserslist/-/browserslist-4.16.6.tgz#d7901277a5a88e554ed305b183ec9b0c08f66fa2"
   integrity sha512-Wspk/PqO+4W9qp5iUTJsa1B/QrYn1keNCcEP5OvP7WBwT4KaDly0uONYmC6Xa3Z5IqnUgS0KcgLYu1l74x0ZXQ==
@@ -2427,7 +2417,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001093:
+caniuse-lite@^1.0.0:
   version "1.0.30001099"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001099.tgz#540118fcc6842d1fde62f4ee5521d1ec6afdb40e"
   integrity sha512-sdS9A+sQTk7wKoeuZBN/YMAHVztUfVnjDi4/UV3sDE8xoh7YR12hKW+pIdB3oqKGwr9XaFL2ovfzt9w8eUI5CA==
@@ -3042,14 +3032,7 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   dependencies:
     ms "2.0.0"
 
-debug@^3.1.1:
-  version "3.2.6"
-  resolved "https://registry.npmjs.org/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
-  integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
-  dependencies:
-    ms "^2.1.1"
-
-debug@^3.2.6:
+debug@^3.1.1, debug@^3.2.6:
   version "3.2.7"
   resolved "https://registry.npmjs.org/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
   integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
@@ -3334,11 +3317,6 @@ ee-first@1.1.1:
   resolved "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.488:
-  version "1.3.497"
-  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.497.tgz#de00f2f2f44c258c4577fbfbd5124b94c18bfa44"
-  integrity sha512-sPdW5bUDZwiFtoonuZCUwRGzsZmKzcLM0bMVhp6SMCfUG+B3faENLx3cE+o+K0Jl+MPuNA9s9cScyFjOlixZpQ==
-
 electron-to-chromium@^1.3.723:
   version "1.3.727"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.727.tgz#857e310ca00f0b75da4e1db6ff0e073cc4a91ddf"
@@ -3454,11 +3432,6 @@ es-to-primitive@^1.2.1:
     is-callable "^1.1.4"
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
-
-escalade@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/escalade/-/escalade-3.0.1.tgz#52568a77443f6927cd0ab9c73129137533c965ed"
-  integrity sha512-DR6NO3h9niOT+MZs7bjxlj2a1k+POu5RN8CLTPX2+i78bRi9eLe7+0zXgUHMnGXWybYcL61E9hGhPKqedy8tQA==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -3842,17 +3815,7 @@ fresh@0.5.2:
   resolved "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
   integrity sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
 
-fs-extra@^9.0.0:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.0.1.tgz#910da0062437ba4c39fedd863f1675ccfefcb9fc"
-  integrity sha512-h2iAoN838FqAFJY2/qVpzFXy+EBxfVE220PalAqQLDVsFOHLJrZvut5puAbCdNv6WJk+B8ihI+k0c7JK5erwqQ==
-  dependencies:
-    at-least-node "^1.0.0"
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^1.0.0"
-
-fs-extra@^9.1.0:
+fs-extra@^9.0.0, fs-extra@^9.1.0:
   version "9.1.0"
   resolved "https://registry.npmjs.org/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
   integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
@@ -5419,11 +5382,6 @@ node-ipc@^9.1.1:
     event-pubsub "4.3.0"
     js-message "1.0.5"
     js-queue "2.0.0"
-
-node-releases@^1.1.58:
-  version "1.1.59"
-  resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.59.tgz#4d648330641cec704bff10f8e4fe28e453ab8e8e"
-  integrity sha512-H3JrdUczbdiwxN5FuJPyCHnGHIFqQ0wWxo+9j1kAXAzqNMAHlo+4I/sYYxpyK0irQ73HgdiyzD32oqQDcU2Osw==
 
 node-releases@^1.1.71:
   version "1.1.71"
@@ -7726,15 +7684,7 @@ vue-router@^3.5.1:
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.1.tgz#edf3cf4907952d1e0583e079237220c5ff6eb6c9"
   integrity sha512-RRQNLT8Mzr8z7eL4p7BtKvRaTSGdCbTy2+Mm5HTJvLGYSSeG9gDzNasJPP/yOYKLy+/cLG/ftrqq5fvkFwBJEw==
 
-vue-style-loader@^4.1.0:
-  version "4.1.2"
-  resolved "https://registry.npmjs.org/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"
-  integrity sha512-0ip8ge6Gzz/Bk0iHovU9XAUQaFt/G2B61bnWa2tCcqqdgfHs1lF9xXorFbE55Gmy92okFT+8bfmySuUOu13vxQ==
-  dependencies:
-    hash-sum "^1.0.2"
-    loader-utils "^1.0.2"
-
-vue-style-loader@^4.1.3:
+vue-style-loader@^4.1.0, vue-style-loader@^4.1.3:
   version "4.1.3"
   resolved "https://registry.npmjs.org/vue-style-loader/-/vue-style-loader-4.1.3.tgz#6d55863a51fa757ab24e89d9371465072aa7bc35"
   integrity sha512-sFuh0xfbtpRlKfm39ss/ikqs9AbKCoXZBpHeVZ8Tx650o0k0q/YCM7FRvigtxpACezfq6af+a7JeqVTWvncqDg==
