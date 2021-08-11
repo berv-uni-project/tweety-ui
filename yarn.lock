@@ -1545,14 +1545,14 @@
   dependencies:
     "@vue/cli-shared-utils" "^5.0.0-beta.3"
 
-"@vue/cli-plugin-typescript@^5.0.0-beta.2":
-  version "5.0.0-beta.2"
-  resolved "https://registry.npmjs.org/@vue/cli-plugin-typescript/-/cli-plugin-typescript-5.0.0-beta.2.tgz#d2b1c0afd3e319f2d1698675dccf77e11454b807"
-  integrity sha512-oOqLrW0AJIqwszzLkide/FP77IQqiUetO42ShweJKNWPq77JEnbvSUIiQ49QVHqO5ETCZLRyl7aJWJfKUlygTQ==
+"@vue/cli-plugin-typescript@^5.0.0-beta.3":
+  version "5.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-typescript/-/cli-plugin-typescript-5.0.0-beta.3.tgz#a84e3d25986548fb073571052b3ca1e6e84652b0"
+  integrity sha512-OaFJmA2Qf+KEAOFvqh7E4jUMKFRTQYPKgL++7LiqJcrtqTw2aIr7axU4aAPqimDfrapcZ0Ppe3izHIZ/SV2S1w==
   dependencies:
     "@babel/core" "^7.12.16"
     "@types/webpack-env" "^1.15.2"
-    "@vue/cli-shared-utils" "^5.0.0-beta.2"
+    "@vue/cli-shared-utils" "^5.0.0-beta.3"
     babel-loader "^8.2.2"
     cache-loader "^4.1.0"
     fork-ts-checker-webpack-plugin "^6.1.0"
@@ -1630,7 +1630,7 @@
     webpack-merge "^5.7.3"
     webpack-virtual-modules "^0.4.2"
 
-"@vue/cli-shared-utils@^5.0.0-beta.2", "@vue/cli-shared-utils@^5.0.0-beta.3":
+"@vue/cli-shared-utils@^5.0.0-beta.3":
   version "5.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-5.0.0-beta.3.tgz#50d969d641737160ecddcbbc02740906cb593b21"
   integrity sha512-mLD2evhAULpB0jMKtQxUe1WmkK6XbleCL0ZgwpGfFeAgwQyPeO7oG/ly5vLPoE/uDQNlQsHH2hQCgapcA1R7lg==
