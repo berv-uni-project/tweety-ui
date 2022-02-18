@@ -23,7 +23,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.0-rc.3",
     "@vue/cli-plugin-typescript": "^5.0.1",
-    "@vue/cli-service": "^5.0.0-rc.3",
+    "@vue/cli-service": "^5.0.1",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
     "typescript": "^4.5.5",
