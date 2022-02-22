@@ -1899,10 +1899,10 @@ browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.0, browserslist@^4
     node-releases "^2.0.1"
     picocolors "^1.0.0"
 
-buefy@^0.9.16:
-  version "0.9.16"
-  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.9.16.tgz#0d3eb371c0eeee5ea2fc6b3d774f62779dba7e4c"
-  integrity sha512-RTuCFkMLBkZWXe3lMqEab/OpXwbCidcUSZpjsTZewDsOEFOuUMtbaody4buJB+7Zh2msOMowq1gSb1ARix6/vA==
+buefy@^0.9.17:
+  version "0.9.17"
+  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.9.17.tgz#ac5857a1413f253cbb9beb0d87a48021e5b21c78"
+  integrity sha512-+rERzamvkflMsoE6GDqGdj5vpDUmdm5MnCnwjK2O8pdnwr8Pmab94cO//0Vd8ys539qWoeqsjh+B7vPg/lT/nQ==
   dependencies:
     bulma "0.9.3"
 
