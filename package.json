@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@azure/msal-browser": "^2.22.1",
-    "axios": "^0.26.0",
+    "axios": "^0.26.1",
     "buefy": "^0.9.19",
     "vee-validate": "^3.4.14",
     "vue": "^2.6.14",
