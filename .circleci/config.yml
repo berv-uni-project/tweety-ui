@@ -1,16 +1,15 @@
 version: 2.1
 orbs:
-  node: circleci/node@4.5.1
+  node: circleci/node@5.0.1
 jobs:
   test:
-    executor:
-      name: node/default
+    docker:
+      - image: 'cimg/base:stable'
     steps:
       - checkout
       - node/install:
           install-yarn: true
-          install-npm: false
-          npm-version: lts
+          node-version: '16.13'
       - node/install-packages:
           pkg-manager: yarn
       - run:
