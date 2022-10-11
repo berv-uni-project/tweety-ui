@@ -10,7 +10,7 @@
     "start": "npm run serve"
   },
   "dependencies": {
-    "@azure/msal-browser": "^2.29.0",
+    "@azure/msal-browser": "^2.30.0",
     "axios": "^1.1.2",
     "buefy": "^0.9.22",
     "vee-validate": "^3.4.14",
